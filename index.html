@@ -691,9 +691,10 @@ form.addEventListener('submit', async e => {
     formMsg.style.display = 'block';
     form.reset();
     setTimeout(() => { formMsg.style.display = 'none'; }, 6000);
-  } catch (err) {
-    alert('Ошибка отправки. Попробуйте позже или напишите нам напрямую.');
-  }
+} catch (err) {
+  alert('Ошибка: ' + err.message);
+  console.error(err);
+}
 });
 
 
