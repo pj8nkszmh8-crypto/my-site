@@ -692,6 +692,8 @@ form.addEventListener('submit', async e => {
     form.reset();
     setTimeout(() => { formMsg.style.display = 'none'; }, 6000);
 } catch (err) {
+    btn.addEventListener('click', async () => {
+  alert('кнопка нажалась');   // 
   alert('Ошибка: ' + err.message);
   console.error(err);
 }
